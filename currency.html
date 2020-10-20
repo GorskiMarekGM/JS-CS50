@@ -9,7 +9,7 @@
                     fetch('https://api.exchangeratesapi.io/latest?base=USD')
                     .then(response => response.json())
                     .then(data => {
-                        const currency = document.querySelector('#currency').value;
+                        const currency = document.querySelector('#currency').value.toUpperCase();
                         //data.rates.currency - access property of rate, might not exist
                         //data.rates[currency] - access the data from form that user have send
                         const rate = data.rates[currency];
@@ -20,6 +20,10 @@
                         }else{
                             document.querySelector('#result').innerHTML = `Invalid currency`;
                         }
+                    })
+                    //what to do if fetch goeas wrong
+                    .catch(error =>{
+                        console.log('Error:',error);
                     });
 
                     return false;
