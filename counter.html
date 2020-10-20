@@ -14,10 +14,19 @@
                     alert(`Count is now ${counter}`);
                 }
             }
+            //we need to call this function to render whole page
+            document.addEventListener('DOMContentLoaded',function(){
+                //count is assignes like a value
+                //null error - count returns null because can't find button
+                document.querySelector('button').onclick = count;
+            });
+
+            
         </script>
     </head>
     <body>
         <h1>0</h1>
-        <button onclick="count()">Count</button>
+        <!-- <button onclick="count()">Count</button> -->
+        <button>Count</button>
     </body>
 </html>
