@@ -4,7 +4,12 @@
         <title>hello</title>
         <script>
             function hello(){
-                alert('Hello, world!');
+                if(document.querySelector('h1').innerHTML ==='Hello!'){
+                    // change value of h1
+                    document.querySelector('h1').innerHTML = 'Goodbye!';
+                } else {
+                    document.querySelector('h1').innerHTML = 'Hello!';
+                }
             }
         </script>
     </head>
