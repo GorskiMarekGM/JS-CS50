@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+        <style>
+            .btn-payment{
+            background-color: lightgrey;
+            border-radius: 4px;
+            margin: 15px 0px;
+            padding: 14px;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            }
+            .marign-top{
+                margin-top: 23px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="btn-payment button" data-name="gotowka">Zapłać gotówką na miejscu</div>
+        <div class="btn-payment button" data-name="karta">Zapłać kartą na miejscu</div>
+        <div class="btn-payment button" data-name="paypal">PayPal</div>
+    </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // selecting by buttons
+            document.querySelectorAll(".btn-payment").forEach(button => {
+                button.onclick = function(){
+                    alert(button.dataset.name);
+                }
+            });
+        
+        })
+    </script>
+</html>
